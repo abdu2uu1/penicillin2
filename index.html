@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./src/assets/image/LogoPencilin.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pencilin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+<style >
+    .ContanierLoading{
+        background-color: white;
+        position: fixed;
+        min-height: 100vh;
+        min-width: 100vw;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .ContainerImage{
+            width: 200px;
+            height: 200px;
+            
+        }
+        .ContainerImageL img{
+            width: 100%;
+            height:100%;
+        }
+        .loadingMain{
+            margin-top: 20px;
+            width:50px;
+            height: 50px;
+            border: 5px solid #3284BB;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            
+    animation: loading 1s linear infinite;
+        }
+        @keyframes loading {
+            0%{
+                transform:rotate(0deg)
+            }100%{
+                transform:rotate(360deg)
+            }
+        }
+</style>
+</head>
+
+<body>
+    <div class="ContanierLoading" id="ContanierLoading">
+            <div class="ContainerImageL">
+                <img  src="./src/assets/image/LogoPencilin.png" />
+            </div>
+            <div class="loadingMain">
+            </div>
+    </div>
+    <div id="app"></div>
+    <!-- <script type="module" src="/src/main.ts"></script> -->
+</body>
+
+</html>
